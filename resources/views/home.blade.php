@@ -14,7 +14,7 @@
         <h2>Selamat Datang, {{ Auth::user()->username }}</h2>
 
         <div class="credit-info">
-            <strong>Uang Anda:</strong> Rp{{ number_format(Auth::user()->credit ?? 0, 0, ',', '.') }}
+            <strong>Credit Anda:</strong> Rp{{ number_format(Auth::user()->credit ?? 0, 0, ',', '.') }}
         </div>
 
         <div class="diamond-box">
