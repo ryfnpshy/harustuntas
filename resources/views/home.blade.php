@@ -19,7 +19,7 @@
     <div class="rounded-2xl p-6 bg-gradient-to-r from-gray-800 to-gray-900 shadow-xl animate-pulse-slow">
         <div class="flex items-center space-x-4">
             <img 
-                src="/storage/avatars/bx-user-circle.png" 
+                src="{{ asset('storage/' . Auth::user()->avatar) }}" 
                 alt="User Avatar" 
                 class="w-10 h-10 rounded-full object-cover border-2 border-indigo-500 shadow"
             >
