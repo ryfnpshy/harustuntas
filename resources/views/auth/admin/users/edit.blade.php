@@ -83,4 +83,12 @@
     </div>
 </form>
 
+<form action="/admin/user/delete/{{ $user->id }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus akun ini?');">
+    @csrf
+    @method('DELETE')
+    <button type="submit" class="inline-flex justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white hover:bg-red-500">
+        Hapus
+    </button>
+</form>
+
 </x-layouts.admin>

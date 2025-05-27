@@ -25,6 +25,8 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::post('/topup', [AuthController::class, 'topup'])->middleware('auth');
 Route::get('/home', [AuthController::class, 'home'])->middleware('auth');
 
+Route::delete('/admin/user/delete/{id}', [AdminController::class, 'PDeleteUser'])->name('admin.deleteUser');
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [HomeController::class, 'index']);
     Route::post('/buy', [HomeController::class, 'buy']);
