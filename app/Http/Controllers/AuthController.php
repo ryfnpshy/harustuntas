@@ -23,15 +23,20 @@ class AuthController extends Controller
     }
 
     public function login(Request $request)
-    {
-        $credentials = $request->only('username', 'password');
+{
+    $credentials = $request->only('username', 'password');
 
-        if (Auth::attempt($credentials)) {
+    if (Auth::attempt($credentials)) {
+        if (Auth::user()->is_admin) {
+            return redirect('/admin');
+        } else {
             return redirect('/home');
         }
-
-        return back()->with('error', 'Username atau password salah');
     }
+
+    return back()->with('error', 'Username atau password salah');
+}
+
 
     public function showRegister()
     {
