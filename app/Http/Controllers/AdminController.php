@@ -137,7 +137,7 @@ class AdminController extends Controller
         $data = [
             'name' => $request->username,
             'username' => $request->username,
-            'is_admin' => $request->has('is_admin') ? 1 : 0,
+            'is_admin' => $request->boolean('is_admin'),
         ];
 
         if ($request->filled('password')) {
