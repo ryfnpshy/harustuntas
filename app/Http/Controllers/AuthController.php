@@ -105,7 +105,7 @@ class AuthController extends Controller
 public function topup(Request $request)
 {
     $request->validate([
-        'amount' => 'required|integer|min:10000'
+        'amount' => 'required|integer|min:1000'
     ]);
 
     $user = Auth::user();
