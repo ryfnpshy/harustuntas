@@ -12,7 +12,7 @@
                     Login
                     <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-[#6c5ce7] to-[#fd79a8] rounded-full"></span>
                 </h2>
-                <p class="mt-2 text-[#f5f6fa] opacity-80">Enter your credentials to continue</p>
+                <p class="mt-2 text-[#f5f6fa] opacity-80">Silahkan login untuk melanjutkan</p>
             </div>
 
             @if(session('error'))

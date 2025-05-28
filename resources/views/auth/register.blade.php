@@ -6,7 +6,7 @@
         <div class="text-center mb-6">
             <h1 class="text-3xl font-extrabold">Register</h1>
             <div class="w-16 h-1 mx-auto mt-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
-            <p class="mt-3 text-gray-300">Create your account to continue</p>
+            <p class="mt-3 text-gray-300">Buat akun anda dan selesaikan tubes</p>
         </div>
 
         @if($errors->any())
