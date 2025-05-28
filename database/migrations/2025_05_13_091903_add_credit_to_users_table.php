@@ -14,9 +14,6 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
         $table->integer('credit')->default(50000);
         });
-        Schema::table('users', function (Blueprint $table) {
-        $table->string('avatar')->nullable();});
-
     }
 
     /**
