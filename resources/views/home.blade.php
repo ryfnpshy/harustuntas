@@ -84,5 +84,7 @@
         <button type="submit" class="btn btn-danger">Logout</button>
     </form>
 
+    <script src="js/script.js"></script>
+
 </div>
 @endsection
