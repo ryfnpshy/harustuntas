@@ -47,5 +47,7 @@ Route::middleware(['auth'])->group(function () {
     // Halaman Topup User Khusus Admin
     Route::get('/admin/topup', [AdminController::class, 'GShowTopup'])->middleware(IsAdminAccess::class);
     Route::put('/admin/topup/add', [AdminController::class, 'PAddTopup'])->middleware(IsAdminAccess::class);
+    
+    Route::put('/profile/update', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('profile.update');
 });
 

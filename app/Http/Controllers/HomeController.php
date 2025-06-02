@@ -43,4 +43,22 @@ public function index()
 
         return back()->with('success', 'Berhasil membeli ' . $jumlah . ' Diamond.');
     }
+    public function updateProfile(Request $request)
+{
+    $request->validate([
+        'bio' => 'nullable|string|max:255',
+        'tanggal_lahir' => 'nullable|date',
+        'email' => 'required|email',
+        'whatsapp' => 'nullable|string|max:20',
+    ]);
+
+    $user = Auth::user();
+    $user->bio = $request->bio;
+    $user->tanggal_lahir = $request->tanggal_lahir;
+    $user->email = $request->email;
+    $user->whatsapp = $request->whatsapp;
+    $user->save();
+
+    return back()->with('success', 'Profil berhasil diupdate!');
+}
 }

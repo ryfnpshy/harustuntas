@@ -26,6 +26,25 @@
             <h2 class="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-indigo-300">
                 Selamat Datang, {{ Auth::user()->username }}
             </h2>
+            <!-- Tombol Edit Profil -->
+            <button 
+                onclick="document.getElementById('editProfileModal').classList.remove('hidden')" 
+                class="ml-4 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded shadow text-sm"
+            >
+                Edit Profil
+            </button>
+        </div>
+        {{-- Tampilkan info tambahan --}}
+        <div class="mt-2 text-black text-sm space-y-1">
+            @if(Auth::user()->bio)
+                <div><span class="font-semibold">Bio:</span> {{ Auth::user()->bio }}</div>
+            @endif
+            @if(Auth::user()->tanggal_lahir)
+                <div><span class="font-semibold">Tanggal Lahir:</span> {{ Auth::user()->tanggal_lahir }}</div>
+            @endif
+            @if(Auth::user()->whatsapp)
+                <div><span class="font-semibold">WhatsApp:</span> {{ Auth::user()->whatsapp }}</div>
+            @endif
         </div>
     </div>
 
@@ -83,6 +102,31 @@
         @csrf
         <button type="submit" class="btn btn-danger">Logout</button>
     </form>
+
+    <!-- Modal Edit Profil -->
+    <div id="editProfileModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-md relative">
+            <button onclick="document.getElementById('editProfileModal').classList.add('hidden')" class="absolute top-2 right-2 text-black hover:text-red-500 text-xl">&times;</button>
+            <h3 class="text-lg font-bold mb-4 text-indigo-700">Edit Profil</h3>
+            <form method="POST" action="{{ route('profile.update') }}">
+                @csrf
+                @method('PUT')
+                <div class="mb-3">
+                    <label class="block text-sm font-medium text-gray-700">Bio</label>
+                    <textarea name="bio" class="w-full border rounded p-2" rows="2">{{ Auth::user()->bio }}</textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="block text-sm font-medium text-gray-700">Tanggal Lahir</label>
+                    <input type="date" name="tanggal_lahir" class="w-full border rounded p-2" value="{{ Auth::user()->tanggal_lahir }}">
+                </div>
+                <div class="mb-3">
+                    <label class="block text-sm font-medium text-gray-700">Nomor WhatsApp</label>
+                    <input type="text" name="whatsapp" class="w-full border rounded p-2" value="{{ Auth::user()->whatsapp }}">
+                </div>
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded font-semibold">Hapus</button>
+            </form>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 
