@@ -14,4 +14,14 @@ class Transaction extends Model
         'jumlah_diamond',
         'total_harga',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function diamond()
+    {
+        return $this->belongsTo(Diamond::class);
+    }
 }

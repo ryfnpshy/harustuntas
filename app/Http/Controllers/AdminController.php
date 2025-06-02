@@ -9,6 +9,7 @@ use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Log;
 use App\Models\User;
 use App\Models\Transaction;
+use App\Models\Diamond;
 
 
 
@@ -18,7 +19,11 @@ class AdminController extends Controller
     
     public function index()
     {
-        return view('auth.admin.index');
+        $totalUsers = \App\Models\User::count();
+        $totalDiamond = \App\Models\Diamond::count();
+        $totalTransactions = \App\Models\Transaction::count();
+        $latestTransactions = \App\Models\Transaction::with(['user','diamond'])->latest()->take(5)->get();
+        return view('auth.admin.index', compact('totalUsers', 'totalDiamond', 'totalTransactions', 'latestTransactions'));
     }
 
     // Topup
