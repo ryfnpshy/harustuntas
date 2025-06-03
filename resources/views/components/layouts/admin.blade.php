@@ -261,55 +261,6 @@
 
 
 
-<!-- Tambahkan link Bootstrap di <head>  TUDSULAIMAN-->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<div class="container mt-5">
-  <h1 class="mb-4">Informasi </h1>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card text-bg-primary mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Total Pengguna yang berkunjung</h5>
-          <p class="card-text fs-2">1,444</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card text-bg-success mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Transaksi Hari Ini</h5>
-          <p class="card-text fs-2">567</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card text-bg-warning mb-3">
-        <div class="card-body">
-          <h5 class="card-title">Pendapatan hari ini</h5>
-          <p class="card-text fs-2">Rp.89.554.789</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-<style>
-@keyframes wave {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(2deg); }
-  50% { transform: rotate(-2deg); }
-  75% { transform: rotate(2deg); }
-  100% { transform: rotate(0deg); }
-}
-
-.card:hover {
-  animation: wave 0.5s ease-in-out;
-}
-</style>
 
 
 
