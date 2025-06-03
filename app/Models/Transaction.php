@@ -11,6 +11,7 @@ class Transaction extends Model
 
     protected $fillable = [
         'user_id',
+        'diamond_id',
         'jumlah_diamond',
         'total_harga',
     ];
