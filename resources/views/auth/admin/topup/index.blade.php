@@ -95,7 +95,7 @@
         <!-- Tambahan input number -->
         <div class="mb-4">
             <label for="jumlah_topup" class="block mb-1 font-medium text-gray-700">Jumlah Topup</label>
-            <input type="number" name="jumlah_topup" id="jumlah_topup" min="1" class="block w-full rounded border border-gray-300 px-3 py-2" placeholder="Masukkan jumlah topup" required>
+            <input type="number" name="jumlah_topup" id="jumlah_topup" min="1" class="block w-full rounded border border-gray-300 px-2 py-2" placeholder="Masukkan jumlah topup" required>
         </div>
 
         <!-- Submit button -->

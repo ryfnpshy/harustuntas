@@ -62,7 +62,7 @@
                         <div class="flex items-center justify-end gap-x-6 border-t border-gray-900/10 px-4 py-4 sm:px-8">
                             <a href="{{ route('admin.diamonds.index') }}" class="text-sm font-semibold leading-6 text-gray-900">Batal</a>
                             <button type="submit"
-                                class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                class="rounded-md bg-gradient-to-r from-[#6c5ce7] to-[#fd79a8] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-from-[#6c5ce7] to-[#fd79a8]">
                                 Simpan Paket Diamond
                             </button>
                         </div>

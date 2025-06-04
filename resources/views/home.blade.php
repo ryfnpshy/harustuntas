@@ -43,7 +43,7 @@
                 <div><span class="font-semibold text-indigo-100">Bio:</span> {{ Auth::user()->bio }}</div>
             @endif
             @if(Auth::user()->tanggal_lahir)
-                <div><span class="font-semibold text-indigo-100">Tanggal Lahir:</span> {{ \Carbon\Carbon::parse(Auth::user()->tanggal_lahir)->format('d F Y') }}</div> {{-- Format tanggal --}}
+                <div><span class="font-semibold text-indigo-100">Tanggal Lahir:</span> {{ \Carbon\Carbon::parse(Auth::user()->tanggal_lahir)->format('Y F D') }}</div> {{-- Format tanggal --}}
             @endif
             @if(Auth::user()->whatsapp)
                 <div><span class="font-semibold text-indigo-100">WhatsApp:</span> {{ Auth::user()->whatsapp }}</div>
